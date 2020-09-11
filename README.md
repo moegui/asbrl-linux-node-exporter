@@ -1,7 +1,7 @@
 ASBRL-LINUX-NODE-EXPORTER
 =========
 
-Deploy a official Node Exporter (Linux) as a Docker container.
+Deploy an official Node Exporter (Linux) as a Docker container.
 
 Requirements
 ------------
@@ -11,8 +11,7 @@ Requirements
 Role Variables
 --------------
 
-- default_user: 'ubuntu'
-- BUILD: 'v0.11.1'
+- BUILD: 'v1.0.1'
 
 Dependencies
 ------------
@@ -22,8 +21,11 @@ None
 Example Playbook
 ----------------
 
-
-    - name: 
+    - name: Deploy Node Exporter
+      include_role:
+        name: asbrl-linux-node-exporter
+      tags:
+        - node-exporter 
 
 License
 -------
