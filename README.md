@@ -1,3 +1,36 @@
-# asbrl-linux-node-exporter
+ASBRL-LINUX-NODE-EXPORTER
+=========
 
-Ansible Role for Linux Node Exporter
+Deploy a official Node Exporter (Linux) as a Docker container.
+
+Requirements
+------------
+
+- Need to be Docker engine installed.
+
+Role Variables
+--------------
+
+- default_user: 'ubuntu'
+- BUILD: 'v0.11.1'
+
+Dependencies
+------------
+
+None
+
+Example Playbook
+----------------
+
+
+    - name: 
+
+License
+-------
+
+BSD
+
+Author Information
+------------------
+
+Moegui.com
