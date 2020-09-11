@@ -1,0 +1,16 @@
+---
+- name: Node Exporter
+  docker_container:
+    name: "node-exporter"
+    image: "prom/node-exporter:{{ BUILD }}"
+    command: --path.rootfs=/host
+    network_mode: host
+    pid_mode: host
+    pull: "yes"
+    recreate: "yes"
+    state: "started"
+    restart_policy: "unless-stopped"
+    # published_ports:
+    #  - "0.0.0.0:9100:9100"
+    volumes:
+      - /:/host:ro,rslave
