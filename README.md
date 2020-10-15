@@ -12,6 +12,11 @@ Role Variables
 --------------
 
 - BUILD: 'v1.0.1'
+- CONTAINER_NAME: "node-exporter"
+- DOCKER_CPU_PERIOD: 0
+- DOCKER_CPU_QUOTA: 0
+- DOCKER_MEMORY: 0
+- CONTAINER_STATE: 'started'
 
 Dependencies
 ------------
