@@ -1,5 +1,23 @@
 ---
-- hosts: localhost
-  remote_user: root
-  roles:
-    - asbrl-linux-node-exporter/
+- name: Deploy
+  hosts: localhost
+  order: sorted
+  become: true
+
+  pre_tasks:
+
+  - name: copy role locally (DEBUG)
+    copy:
+      src: ../
+      dest: ./roles/asbrl-linux-node-exporter
+  
+  tasks:
+
+  - name: Deploy Linux Node Exporter
+    include_role:
+      name: asbrl-linux-node-exporter
+    vars:
+      DOCKER_CPU_QUOTA: 100000
+      DOCKER_MEMORY: 1G
+    tags:
+      - node-exporter
