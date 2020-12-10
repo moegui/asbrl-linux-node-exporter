@@ -15,5 +15,7 @@
     restart_policy: "unless-stopped"
     # published_ports:
     #  - "0.0.0.0:9100:9100"
-    volumes:
+    volumes:asbrl-linux-node-exporter
       - /:/host:ro,rslave
+  tags: 
+  - asbrl-linux-node-exporter

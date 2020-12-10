@@ -30,7 +30,7 @@ Example Playbook
       include_role:
         name: asbrl-linux-node-exporter
       tags:
-        - node-exporter 
+        - asbrl-linux-node-exporter
 
 License
 -------
