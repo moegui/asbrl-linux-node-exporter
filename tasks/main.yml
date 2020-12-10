@@ -17,5 +17,5 @@
     #  - "0.0.0.0:9100:9100"
     volumes:
       - /:/host:ro,rslave
-  tags: 
+  tags:
   - asbrl-linux-node-exporter
